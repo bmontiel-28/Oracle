@@ -66,3 +66,6 @@ cat /etc/login.defs | grep -i UID
 
 
 /oracle12c/app/oracle/product/12.2.0/
+
+
+id -Gn oracle
