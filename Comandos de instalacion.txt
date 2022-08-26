@@ -52,3 +52,10 @@ groupadd -g 508 dgdba
 groupadd -g 509 kmdba
 groupadd -g 510 racdba
 useradd -u 502 -g oinstall -G dba,asmdba,backupdba,dgdba,kmdba,racdba oracle
+
+
+
+export ORACLE_HOME=/oracle11g/app/oracle/product/11.2.0/db_1
+export ORACLE_SID=PROD1
+export ORACLE_BASE=/oracle11g/app/oracle
+export PATH=$ORACLE_HOME/bin:$PATH
