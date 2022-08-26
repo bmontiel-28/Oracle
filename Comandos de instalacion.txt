@@ -74,3 +74,6 @@ id -Gn oracle
 ./runInstaller  -ignoreSysPrereqs
 
 
+dd if=/dev/zero of=/swapfile bs=1024 count=1000000
+
+
