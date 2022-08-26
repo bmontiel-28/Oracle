@@ -1,3 +1,13 @@
+#Crear directorio
+mkdir -p /oracle12c/app/oracle/product/12.2.0/nombre_carpeta_BD
+
+
+#Reiniciamos el kernel
+/sbin/sysctl --system
+/sbin/sysctl --a
+
+
+#Instalacion de paquetes necesarios
 yum update
 yum install -y bc
 yum install -y binutils
@@ -41,7 +51,7 @@ yum install -y sysstat
 yum install libnsl.x86_64
 
 
-
+#Creacion de usuarios y grupos
 groupadd -g 501 oinstall
 groupadd -g 502 dba
 groupadd -g 503 oper
@@ -55,28 +65,31 @@ groupadd -g 510 racdba
 useradd -u 502 -g oinstall -G dba,asmdba,backupdba,dgdba,kmdba,racdba oracle
 
 
-
+#Variables de entorno
 export ORACLE_HOME=/oracle11g/app/oracle/product/11.2.0/db_1
 export ORACLE_SID=PROD1
 export ORACLE_BASE=/oracle11g/app/oracle
 export PATH=$ORACLE_HOME/bin:$PATH
 
 
-
+#Extras
 cat /etc/login.defs | grep -i UID
-
-
-/oracle12c/app/oracle/product/12.2.0/
-
-
 id -Gn oracle
 
 
-./runInstaller  -ignoreSysPrereqs
-
-
+#Creacion de particion necesaria
 dd if=/dev/zero of=/swapfile bs=1024 count=1000000
 mkswap /swapfile
 swapon /swapfile
-/swapfile       swap       swap       defaults       0 0
+
+
+#Ejecutar instalador
+./runInstaller
+
+
+Ejecutar instalador sin requisitos
+./runInstaller  -ignoreSysPrereqs
+
+
+
 
