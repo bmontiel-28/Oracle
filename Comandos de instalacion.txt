@@ -63,3 +63,6 @@ export PATH=$ORACLE_HOME/bin:$PATH
 
 
 cat /etc/login.defs | grep -i UID
+
+
+/oracle12c/app/oracle/product/12.2.0/
