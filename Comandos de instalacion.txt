@@ -71,4 +71,6 @@ cat /etc/login.defs | grep -i UID
 id -Gn oracle
 
 
-./runInstaller
+./runInstaller  -ignoreSysPrereqs
+
+
