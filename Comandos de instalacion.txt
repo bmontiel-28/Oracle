@@ -38,3 +38,17 @@ yum install -y net-tools
 yum install -y nfs-utils
 yum install -y smartmontools 
 yum install -y sysstat
+
+
+
+groupadd -g 501 oinstall
+groupadd -g 502 dba
+groupadd -g 503 oper
+groupadd -g 504 asmadmin
+groupadd -g 505 asmdba
+groupadd -g 506 asmoper
+groupadd -g 507 backupdba
+groupadd -g 508 dgdba
+groupadd -g 509 kmdba
+groupadd -g 510 racdba
+useradd -u 502 -g oinstall -G dba,asmdba,backupdba,dgdba,kmdba,racdba oracle
