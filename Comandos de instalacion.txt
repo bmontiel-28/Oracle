@@ -59,3 +59,7 @@ export ORACLE_HOME=/oracle11g/app/oracle/product/11.2.0/db_1
 export ORACLE_SID=PROD1
 export ORACLE_BASE=/oracle11g/app/oracle
 export PATH=$ORACLE_HOME/bin:$PATH
+
+
+
+cat /etc/login.defs | grep -i UID
