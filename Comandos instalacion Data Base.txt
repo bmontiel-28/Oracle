@@ -98,7 +98,7 @@ chmod -R 775 /oracle
 #Variables de entorno
 export ORACLE_BASE=/oracle/app/oracle/
 #export ORACLE_HOME=/oracle/app/oracle/product/12.2.0/nombre_carpeta_BD
-export ORACLE_HOME=$ORACLE_BASE/product/12.1.0.2/db_1
+export ORACLE_HOME=$ORACLE_BASE/product/12.2.0/nombre_carpeta_BD
 export ORACLE_SID=PROD1
 export PATH=$ORACLE_HOME/bin:$PATH
 
